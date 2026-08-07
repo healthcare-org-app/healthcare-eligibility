@@ -1,0 +1,12 @@
+name: eligibility-service
+port: 8800
+lang: python
+description: "eligibility-service \u2014 domain: insurance"
+http_deps:
+- payer-directory
+- payer-edi-connect
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- patient.created
